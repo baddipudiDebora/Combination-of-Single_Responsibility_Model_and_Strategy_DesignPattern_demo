@@ -9,7 +9,7 @@ import srp_PageComponents.footerNavigationBar;
 
 public class LandingPage {
 	WebDriver driver;
-	// to access navigation bar locators and methods of different section / page objects
+	// to access navigation bar locators and methods of different section of this particular page
 	By footerSectionElement = By.xpath("//footer[@class='happy-gi-footer']");
 	By headerSectionElement = By.xpath("//header[@class='happy-gi-header gi-special-theme-left header-sticky']");
 	

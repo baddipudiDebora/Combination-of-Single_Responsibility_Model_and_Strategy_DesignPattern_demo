@@ -10,9 +10,7 @@ public class HeaderNavigationBar extends AbstractComponents{
 	
 	// locators of header elements
 	
-    By hotelsLink = By.xpath("//a[contains(text(),'Hotels')]");
-	
-	
+    By hotelsLink = By.xpath("//a[contains(text(),'Hotels')]");	
 	
 	// methods to handle header elements
 	public void selectHotels() {
@@ -20,9 +18,10 @@ public class HeaderNavigationBar extends AbstractComponents{
 	}
 	
 	
-	public HeaderNavigationBar(WebDriver driver, By footerSectionElement) {
-		super(driver,footerSectionElement );  // invoking parent class constructor 
+	public HeaderNavigationBar(WebDriver driver, By headerSectionElement) {
+		super(driver,headerSectionElement );  // invoking parent class constructor 
 	}
 	
 
 }
+

@@ -4,40 +4,40 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import com.goibibo.pages.HotelSearchPage;
-import com.goibibo.pages.HotelsViewPage;
-import com.goibibo.pages.PaymentPage;
-import com.goibibo.pages.ProceedtoPaymentPage;
-import com.goibibo.pages.SingleHotelsViewPage;
-
+import srp_PageObjects.HotelSearchPage;
 import srp_PageObjects.LandingPage;
 
-public class SenarioOneTest  {
-	
-	
-	//Senario 1 --> Search a hotel for one adult and log the hotel's name in TestNG
-	@Test(priority = 1)
+public class SenarioOneTest {
+
+	// Scenario 1 --> Search a hotel for one adult and log the hotel's name in TestNG
+	@Test
 	public void hotelSearchandView() {
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
+
 		LandingPage lp = new LandingPage(driver);
-		
-		
+
 		lp.loadLandingPage();
-		lp.getNavigationBar().selectHotels();
-		 HotelSearchPage hotelBookingPageobj = new HotelSearchPage(driver);
-		 try {
-			hotelBookingPageobj.enterHotels("Ooty");
-			hotelBookingPageobj.enterNumofGuest();
-			hotelBookingPageobj.clickOnSearch();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		// lp.getFooterBar().selectdomesticHotels().click();
+
+		
+		  lp.getNavigationBar().selectHotels();
+		  // accessing the Page object of Hotels search page
+		  HotelSearchPage hotelSearchPage =	  new HotelSearchPage(driver); 
+		  try
+		  { 
+		  // accessing the component class methods under the hotelSearchPage Page object class
+		  hotelSearchPage.getSearchHotelsBlock().enterHotels("Ooty");
+		  hotelSearchPage.getSearchHotelsBlock().enterNumofGuest(); 
+		  hotelSearchPage.getSearchHotelsBlock().clickOnSearch();
+		  }
+		  catch (InterruptedException e)
+		  { // TODO Auto-generated catch block
+		  e.printStackTrace();
+		  }
 		 
 		
-       
 		
-	}
 
+	}
 }

@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-12-22T16:18:41 EST" name="Default suite" finished-at="2021-12-22T16:18:52 EST" duration-ms="11214">
+  <suite started-at="2021-12-22T23:47:31 EST" name="Default suite" finished-at="2021-12-22T23:47:46 EST" duration-ms="14658">
     <groups>
     </groups>
-    <test started-at="2021-12-22T16:18:41 EST" name="Default test" finished-at="2021-12-22T16:18:52 EST" duration-ms="11214">
+    <test started-at="2021-12-22T23:47:31 EST" name="Default test" finished-at="2021-12-22T23:47:46 EST" duration-ms="14658">
       <class name="demo.display.Single_Responsibility_DesignPattern.SenarioOneTest">
-        <test-method signature="hotelSearchandView()[pri:1, instance:demo.display.Single_Responsibility_DesignPattern.SenarioOneTest@120f102b]" started-at="2021-12-22T16:18:41 EST" name="hotelSearchandView" finished-at="2021-12-22T16:18:52 EST" duration-ms="11172" status="PASS">
+        <test-method signature="hotelSearchandView()[pri:0, instance:demo.display.Single_Responsibility_DesignPattern.SenarioOneTest@120f102b]" started-at="2021-12-22T23:47:31 EST" name="hotelSearchandView" finished-at="2021-12-22T23:47:46 EST" duration-ms="14600" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- hotelSearchandView -->
