@@ -6,19 +6,22 @@
 > header navigation component class. So if you want to perform any regression, you can perform around these methods only. This is completely separate class.
 
 ## Structure of the Design
-### AbstractComponenets Page where we can create our own custom methods like findElement();
+### AbstractComponenets Page 
+where we can create our own custom methods like findElement(); which accepts an argument of type WebElement and limits the search to that section of the page. 
 ### Page Object Class
-### SectionComponents class like HeaderNavigation Bar, FooterComponent , filtersComponenet
+Each page class redirects / encapsulates responsibilities to Section Components class
+### SectionComponents class 
+like one class for HeaderNavigation Bar, one class for FooterComponent , one class for filtersComponenet
 ### Test Class
-
+Scenario-1 - Go to Hotel Booking, enter a place, number of adults and click on search , click on first hotel and log its name.
 ## Flow of Execution
-> From the Test class, where we create object of PageClass like LandingPage. 
-> then using the object of PageClass we access the component class which is extends AbstractComponents and use our custom method findElement to limit the scope within that component.
+From the Test class, where we create object of PageClass like LandingPage. 
+then using the object of PageClass we access the component class which is extends AbstractComponents and use our custom method findElement to limit the locator search scope within that component.
 ### example
-> in the ** Test Class ** we create Object of the each needed pageClass and pass a driver object 
->  HotelSearchPage hotelSearchPage =	  new HotelSearchPage(driver); 
->	 // accessing the component class methods under the hotelSearchPage Page object class. 
-> // *** hotelSearchPage.getSearchHotelsBlock() *** returns the webelement of the compnent using the Page Class. while *** .enterHotels("Ooty"); *** is from the Component class. 
+> in the ** Test Class ** we create Object of the each needed pageClass and pass a driver object (space, space, Enter)
+>  HotelSearchPage hotelSearchPage =	  new HotelSearchPage(driver); (space, space, Enter)
+> // accessing the component class methods under the hotelSearchPage Page object class. (space, space, Enter)
+> // *** hotelSearchPage.getSearchHotelsBlock() *** returns the webelement of the compnent using the Page Class. while *** .enterHotels("Ooty"); *** is from the Component class. (space, space, Enter)
 >  hotelSearchPage.getSearchHotelsBlock().enterHotels("Ooty");
 
 > in the ** Page Class **
