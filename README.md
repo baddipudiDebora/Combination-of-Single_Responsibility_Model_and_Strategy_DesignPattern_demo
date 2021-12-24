@@ -18,10 +18,10 @@ Scenario-1 - Go to Hotel Booking, enter a place, number of adults and click on s
 From the Test class, where we create object of PageClass like LandingPage. 
 then using the object of PageClass we access the component class which is extends AbstractComponents and use our custom method findElement to limit the locator search scope within that component.
 ### example
-> in the ** Test Class ** we create Object of the each needed pageClass and pass a driver object (space, space, Enter)
->  HotelSearchPage hotelSearchPage =	  new HotelSearchPage(driver); (space, space, Enter)
-> // accessing the component class methods under the hotelSearchPage Page object class. (space, space, Enter)
-> // *** hotelSearchPage.getSearchHotelsBlock() *** returns the webelement of the compnent using the Page Class. while *** .enterHotels("Ooty"); *** is from the Component class. (space, space, Enter)
+> in the ** Test Class ** we create Object of the each needed pageClass and pass a driver object **Enter**
+>  HotelSearchPage hotelSearchPage =	  new HotelSearchPage(driver); **Enter**
+> // accessing the component class methods under the hotelSearchPage Page object class. **Enter**
+> // *** hotelSearchPage.getSearchHotelsBlock() *** returns the webelement of the compnent using the Page Class. while *** .enterHotels("Ooty"); *** is from the Component class. **Enter**
 >  hotelSearchPage.getSearchHotelsBlock().enterHotels("Ooty");
 
 > in the ** Page Class **
