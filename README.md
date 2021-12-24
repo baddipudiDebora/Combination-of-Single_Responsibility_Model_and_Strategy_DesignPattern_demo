@@ -3,7 +3,7 @@
 > Every Page class has its duty to redirect to its page componenets, each page components (header , footer, filters .... ) have single responsibility
 > SRP helps develop a write code that are decoupled when each class has its own job, which we have seen and encapsulate responsibilities to other classes.
 > So if there are any changes in the future on Header navigation bar on the header, 
-> \newline so if there would be any changes on header tab, so that will impact only the methods present in this class.
+> so if there would be any changes on header tab, so that will impact only the methods present in this class.
 > header navigation component class. So if you want to perform any regression, you can perform around these methods only. This is completely separate class.
 
 ## Structure of the Design
@@ -23,7 +23,7 @@ then using the object of PageClass we access the component class which is extend
 ```
   HotelSearchPage hotelSearchPage =	  new HotelSearchPage(driver); 
  // accessing the component class methods under the hotelSearchPage Page object class. 
- // ### hotelSearchPage.getSearchHotelsBlock() ### returns the webelement of the compnent using the Page Class. while enterHotels("Ooty");  is from the Component class. 
+ // ### hotelSearchPage.getSearchHotelsBlock() ### returns the webelement of the component using the Page Class. while enterHotels("Ooty");  is from the Component class. 
  hotelSearchPage.getSearchHotelsBlock().enterHotels("Ooty");
 ```
 > in the ### Page Class ###
