@@ -1,11 +1,14 @@
-# Single_Responsibility_Principle_DesignPattern_Demo
+# Combination of Single_Responsibility_Principle , Stratergy Design Pattern 
 ## need of Single Responsibililty Model 
 > Every Page class has its duty to redirect to its page componenets, each page components (header , footer, filters .... ) have single responsibility
 > SRP helps develop a write code that are decoupled when each class has its own job, which we have seen and encapsulate responsibilities to other classes.
 > So if there are any changes in the future on Header navigation bar on the header, 
 > so if there would be any changes on header tab, so that will impact only the methods present in this class.
 > header navigation component class. So if you want to perform any regression, you can perform around these methods only. This is completely separate class.
-
+## need of Stragergy Design Pattern
+>we create objects for each components which represent various strategies and allow us to select an algorith at runtime. Based on the algorithm that is passed . When we have many similar classes that only differ in the way they they execute some behaviour. 
+> Example - One way is if we want to book flight ticket, then we need to have 3 classes , 1 for one way, 1 for round trip and 1 for multiCity and in each class the logic of that class does in. all of these are called from Page class. but if we do like this we are breaking single reposnsibitlity design patters, as we are executing component page methods in Page class which is aganist Stragergy Design Pattern
+> As per Stragergy Design Pattern, we should be able to pass the stratergy (componenet class name) at runtime , that should be able to redirect to that component.
 ## Structure of the Design
 ### AbstractComponenets Page 
 where we can create our own custom methods like findElement(); which accepts an argument of type WebElement and limits the search to that section of the page. 
