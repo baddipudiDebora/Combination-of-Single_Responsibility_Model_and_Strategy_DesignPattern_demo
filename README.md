@@ -19,16 +19,17 @@ Scenario-1 - Go to Hotel Booking, enter a place, number of adults and click on s
 From the Test class, where we create object of PageClass like LandingPage. 
 then using the object of PageClass we access the component class which is extends AbstractComponents and use our custom method findElement to limit the locator search scope within that component.
 ### example
-> in the ### Test Class ### we create Object of the each needed pageClass and pass a driver object 
+### In the Test Class ### 
+ > we create Object of the each needed pageClass and pass a driver object 
 ```
   HotelSearchPage hotelSearchPage =	  new HotelSearchPage(driver); 
  // accessing the component class methods under the hotelSearchPage Page object class. 
  // ### hotelSearchPage.getSearchHotelsBlock() ### returns the webelement of the component using the Page Class. while enterHotels("Ooty");  is from the Component class. 
  hotelSearchPage.getSearchHotelsBlock().enterHotels("Ooty");
 ```
-> in the ### Page Class ###
-> ```
->   // locator particular section of the page , like filters section, Header , footer .....
+ ### In the Page Class ###
+ ```
+   // locator particular section of the page , like filters section, Header , footer .....
 	By SearchHotelsBlock = By.xpath("//div[@class='SearchBlockUIstyles__AutoSuggestInnerWrap-sc-fity7j-1 emHEpq']");
   	// to access hotels search block locators and methods. This method returns the driver passed from the TestClass and the WebElement of the Component
 	 public SearchHotelsBlock getSearchHotelsBlock()
@@ -37,7 +38,7 @@ then using the object of PageClass we access the component class which is extend
 	 }
 ```
 
- in the ### component class ### which extends form the AbstractComponents class
+### in the component class ### which extends form the AbstractComponents class
  ```
 // locators within the Search Hotels block elements
 // HotelSearchtextbox
@@ -48,7 +49,7 @@ then using the object of PageClass we access the component class which is extend
 			findElement(hotelSearchtextbox).sendKeys(Hotels)
      }
 ```
- in the ### AbstractComponents class ###
+### in the  AbstractComponents class ###
 ```
    WebElement SectionElement;
    // creating custom methods
