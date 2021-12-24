@@ -23,13 +23,13 @@
 
 > in the ** Page Class **
 >   // locator particular section of the page , like filters section, Header , footer .....
-> 	By SearchHotelsBlock = By.xpath("//div[@class='SearchBlockUIstyles__AutoSuggestInnerWrap-sc-fity7j-1 emHEpq']");
+> `code`	By SearchHotelsBlock = By.xpath("//div[@class='SearchBlockUIstyles__AutoSuggestInnerWrap-sc-fity7j-1 emHEpq']");
 >  	// to access hotels search block locators and methods. This method returns the driver passed from the TestClass and the WebElement of the Component
 >	 public SearchHotelsBlock getSearchHotelsBlock()
 >	 {
 >		 return new SearchHotelsBlock(driver, SearchHotelsBlock);
 >	 }
-
+`code`
 > in the ** component class ** which extends form the AbstractComponents class
 >// locators within the Search Hotels block elements
 >// HotelSearchtextbox
