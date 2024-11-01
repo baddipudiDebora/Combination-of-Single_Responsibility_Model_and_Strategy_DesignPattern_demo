@@ -23,22 +23,23 @@ public class SenarioOneTest {
         lp.closePopUp();
         lp.getFooterBar().selectdomesticHotels().click();
 
-//
-//		  lp.getNavigationBar().selectHotels();
-//		  // accessing the Page object of Hotels search page
-//		  HotelSearchPage hotelSearchPage =	  new HotelSearchPage(driver);
-//		  try
-//		  {
-//		  // accessing the component class methods under the hotelSearchPage Page object class
-//		  hotelSearchPage.getSearchHotelsBlock().enterHotels("Ooty");
-//		  hotelSearchPage.getSearchHotelsBlock().enterNumofGuest();
-//		  hotelSearchPage.getSearchHotelsBlock().clickOnSearch();
-//		  }
-//		  catch (InterruptedException e)
-//		  { // TODO Auto-generated catch block
-//		  e.printStackTrace();
-//		  }
-//
+
+		  lp.getNavigationBar().selectHotels();
+
+		  // accessing the Page object of Hotels search page
+		  HotelSearchPage hotelSearchPage =	  new HotelSearchPage(driver);
+		  try
+		  {
+		  // accessing the component class methods under the hotelSearchPage Page object class
+		  hotelSearchPage.getSearchHotelsBlock().enterHotels("Ooty");
+		  hotelSearchPage.getSearchHotelsBlock().enterNumofGuest();
+		  hotelSearchPage.getSearchHotelsBlock().clickOnSearch();
+		  }
+		  catch (InterruptedException e)
+		  { // TODO Auto-generated catch block
+		  e.printStackTrace();
+		  }
+
 
 
     }
