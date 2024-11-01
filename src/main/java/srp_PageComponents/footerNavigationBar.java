@@ -18,6 +18,7 @@ public class footerNavigationBar extends AbstractComponents {
 	
 	// methods to handle header elements
 		public WebElement selectdomesticHotels() {
+
 			return findElement(domesticHotels);
 		//	_driver.findElement(domesticHotels).click();
 		}
