@@ -25,7 +25,7 @@ public class SearchHotelsBlock extends AbstractComponents {
 		By checkOutDatetoEnter = By.xpath("// span[contains(text(),'29')]");
 
 		// numberofGuestButton
-		By numberofGuestButton = By.xpath("//input[@value='2 Guests in 1 Room ']");
+		By numberofGuestButton = By.xpath("//input[@value='2 Adults  . 1 Room ']");
 		
 		// minusnumberofGuestButton
 		By minusnumberofGuestButton = By.xpath("//*[@id=\"root\"]/div[2]/div/section[1]/div[1]/div[2]/div[4]/div/div/div/div[2]/div/span[1]");
@@ -34,14 +34,14 @@ public class SearchHotelsBlock extends AbstractComponents {
 		By doneButtonNumGuest = By.xpath("//button[contains(text(),'Done')]");
 
 		// search button
-		By searchbutton = By.xpath("//button[contains(text(),'Search Hotels')]");
+		By searchbutton = By.xpath("//button[contains(text(),'Update Search')]");
 	
 		// constructor
 		public SearchHotelsBlock(WebDriver driver, By SearchHotelsBlock) {
 			super(driver,SearchHotelsBlock );  // invoking parent class constructor 
 		}
 	
-	// methods to actions of search hotel 
+	   // methods to actions of search hotel
 		public void enterHotels(String Hotels) throws InterruptedException {
 			findElement(hotelSearchtextbox).sendKeys(Hotels);
 			Thread.sleep(2000);

@@ -11,7 +11,7 @@ public class HotelSearchPage {
 	WebDriver driver;
 	// to access navigation bar locators and methods of different section of this particular page
         By headerSectionElement = By.xpath("//header[@class='happy-gi-header gi-special-theme-left header-sticky']");
-		By SearchHotelsBlock = By.xpath("//div[@class='SearchBlockUIstyles__AutoSuggestInnerWrap-sc-fity7j-1 emHEpq']");
+		By SearchHotelsBlock = By.xpath("//div[contains(@class, 'ihxTzt')]");
 		By footerSectionElement = By.xpath("//footer[@class='happy-gi-footer']");
 		// to access header bar locators and methods 
 	public HeaderNavigationBar getNavigationBar() 
