@@ -18,6 +18,7 @@ public class SenarioOneTest {
     // Scenario 1 --> Search a hotel for one adult and log the hotel's name in TestNG
     @Test
     public void hotelSearchandView() throws InterruptedException {
+       System.out.println("Hi inside Scenario1");
         //Create chrome driver object
         WebDriver driver = new ChromeDriver();
         WebDriverManager.chromedriver().setup();
