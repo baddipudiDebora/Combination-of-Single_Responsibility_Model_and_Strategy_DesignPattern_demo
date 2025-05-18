@@ -32,21 +32,21 @@ public class SenarioOneTest {
 
 
         lp.getNavigationBar().selectHotels();
-
-        // accessing the Page object of Hotels search page
-        HotelSearchPage hotelSearchPage = new HotelSearchPage(driver);
-        try {
-            // accessing the component class methods under the hotelSearchPage Page object class
-            hotelSearchPage.getSearchHotelsBlock().enterHotels("Chennai");
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(4000));
-            WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(@class,'icClose')]")));
-
-            driver.findElement(By.xpath("//span[contains(@class,'icClose')]")).click();
-         //   hotelSearchPage.getSearchHotelsBlock().enterNumofGuest();
-            hotelSearchPage.getSearchHotelsBlock().clickOnSearch();
-        } catch (InterruptedException e) { // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+		/*
+		 * // accessing the Page object of Hotels search page HotelSearchPage
+		 * hotelSearchPage = new HotelSearchPage(driver); try { // accessing the
+		 * component class methods under the hotelSearchPage Page object class
+		 * hotelSearchPage.getSearchHotelsBlock().enterHotels("Chennai"); WebDriverWait
+		 * wait = new WebDriverWait(driver, Duration.ofMillis(4000)); WebElement element
+		 * = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
+		 * "//span[contains(@class,'icClose')]")));
+		 * 
+		 * driver.findElement(By.xpath("//span[contains(@class,'icClose')]")).click();
+		 * // hotelSearchPage.getSearchHotelsBlock().enterNumofGuest();
+		 * hotelSearchPage.getSearchHotelsBlock().clickOnSearch(); } catch
+		 * (InterruptedException e) { // TODO Auto-generated catch block
+		 * e.printStackTrace(); }
+		 */
 
 
     }
