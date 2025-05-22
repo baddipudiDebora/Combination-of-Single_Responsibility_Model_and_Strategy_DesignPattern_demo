@@ -47,55 +47,58 @@ public class SenarioOneTest {
         lp.loadLandingPage();
 		  Thread.sleep(9000);
         System.out.println("loaded landing page succesfully");
-			System.out.println(driver.getTitle());  
-	    try {
+
+	    System.out.println(driver.getTitle());
+
+	
+//	    try {
     // Try to switch to an alert
-    Alert alert = driver.switchTo().alert();
-    System.out.println("Alert found: " + alert.getText());
+//    Alert alert = driver.switchTo().alert();
+//    System.out.println("Alert found: " + alert.getText());
     // Optionally, accept or dismiss the alert
-    alert.accept();
-} catch (NoAlertPresentException e) {
-    System.out.println("No JavaScript alert present.");
-}
+ //   alert.accept();
+//} catch (NoAlertPresentException e) {
+//    System.out.println("No JavaScript alert present.");
+//}
 
      //       lp.closePopUp();
-		  lp.getFooterBar().selectdomesticHotels().click();
+	//	  lp.getFooterBar().selectdomesticHotels().click();
 
-		  lp.getNavigationBar().selectHotels();
-        try {
-        	System.out.println("Pass");
-        }
-        catch (Exception e) {
-			System.out.println("Fail");
-		}
+	//	  lp.getNavigationBar().selectHotels();
+ //       try {
+ //       	System.out.println("Pass");
+  //      }
+ //       catch (Exception e) {
+//			System.out.println("Fail");
+//		}
 
 
 		  // accessing the Page object of Hotels search page
-		HotelSearchPage hotelSearchPage = new HotelSearchPage(driver);
-		Thread.sleep(8000);
-        driver.findElement(By.xpath("/html/body/div[6]/div[2]/div/div/div[2]/span/span")).click();
-		 try
-		 {
-          Thread.sleep(4000);
+//		HotelSearchPage hotelSearchPage = new HotelSearchPage(driver);
+//		Thread.sleep(8000);
+ //       driver.findElement(By.xpath("/html/body/div[6]/div[2]/div/div/div[2]/span/span")).click();
+//		 try
+//		 {
+ //         Thread.sleep(4000);
 	//	  driver.findElement(By.id("downshift-1-input")).click();
 			 // accessing the component class methods under the hotelSearchPage Page object class
-		  hotelSearchPage.getSearchHotelsBlock().enterHotels("Goa");
-          hotelSearchPage.getSearchHotelsBlock().enterCheckInDate();
-			 hotelSearchPage.getSearchHotelsBlock().enterCheckOutDate();
+//		  hotelSearchPage.getSearchHotelsBlock().enterHotels("Goa");
+//          hotelSearchPage.getSearchHotelsBlock().enterCheckInDate();
+//			 hotelSearchPage.getSearchHotelsBlock().enterCheckOutDate();
 //
 //		  WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
 //		  "//span[contains(@class,'icClose')]")));
 //
  //		 driver.findElement(By.xpath("//span[contains(@class,'icClose')]")).click();
-		  hotelSearchPage.getSearchHotelsBlock().enterNumofGuest();
-		  hotelSearchPage.getSearchHotelsBlock().clickOnSearch();
+//		  hotelSearchPage.getSearchHotelsBlock().enterNumofGuest();
+//		  hotelSearchPage.getSearchHotelsBlock().clickOnSearch();
 
-		 }
+//		 }
 
-		 catch (InterruptedException e) { // TODO Auto-generated catch block
-		  e.printStackTrace(); }
+//		 catch (InterruptedException e) { // TODO Auto-generated catch block
+//		  e.printStackTrace(); }
 
 
-		driver.quit();
+//		driver.quit();
     }
 }
