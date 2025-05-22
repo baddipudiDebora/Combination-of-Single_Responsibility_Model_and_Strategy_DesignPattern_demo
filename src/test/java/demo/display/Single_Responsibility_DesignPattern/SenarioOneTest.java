@@ -48,6 +48,16 @@ public class SenarioOneTest {
 		  Thread.sleep(9000);
         System.out.println("loaded landing page succesfully");
 			System.out.println(driver.getTitle());  
+	    try {
+    // Try to switch to an alert
+    Alert alert = driver.switchTo().alert();
+    System.out.println("Alert found: " + alert.getText());
+    // Optionally, accept or dismiss the alert
+    alert.accept();
+} catch (NoAlertPresentException e) {
+    System.out.println("No JavaScript alert present.");
+}
+
      //       lp.closePopUp();
 		  lp.getFooterBar().selectdomesticHotels().click();
 
