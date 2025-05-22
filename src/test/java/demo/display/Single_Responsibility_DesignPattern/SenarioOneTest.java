@@ -24,7 +24,7 @@ public class SenarioOneTest {
     public void hotelSearchandView() throws InterruptedException {
 // Create ChromeOptions
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless");                // Run headless mode (as often required in CI)
+		options.addArguments("--headless=new");                // Run headless mode (as often required in CI)
 		options.addArguments("--no-sandbox");                // Required in some CI environments
 		options.addArguments("--disable-dev-shm-usage");     // Improve performance in limited resource environments
 
