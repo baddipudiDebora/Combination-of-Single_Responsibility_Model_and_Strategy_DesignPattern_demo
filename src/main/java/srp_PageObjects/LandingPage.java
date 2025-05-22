@@ -24,6 +24,7 @@ public class LandingPage {
     }
 
     public void loadLandingPage() {
+        System.out.println("inside landing page class");
         driver.get(Constants.testsiteurl);
         driver.manage().window().maximize();
     }

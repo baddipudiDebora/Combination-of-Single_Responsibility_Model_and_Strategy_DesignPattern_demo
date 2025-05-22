@@ -19,24 +19,25 @@ public class SenarioOneTest {
     // Scenario 1 --> Search a hotel for one adult and log the hotel's name in TestNG
     @Test
     public void hotelSearchandView() throws InterruptedException {
-       System.out.println("Hi inside Scenario1");
+
         
-       ChromeOptions options = new ChromeOptions();
-  //     options.addArguments("--user-data-dir=/tmp/chrome-user-data");
-  //     options.addArguments("--headless");  // Optional: Run in headless mode
-  //     options.addArguments("--disable-gpu");  // Optional: Disable GPU acceleration
+//       ChromeOptions options = new ChromeOptions();
+//		     options.addArguments("--user-data-dir=/tmp/chrome-user-data");
+//		   options.addArguments("--headless");  // Optional: Run in headless mode
+//		    options.addArguments("--disable-gpu");  // Optional: Disable GPU acceleration
 
        // Initialize ChromeDriver with these options
-       WebDriver driver = new ChromeDriver(options);
+       WebDriver driver = new ChromeDriver();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(4000));
         WebDriverManager.chromedriver().setup();
 
         LandingPage lp = new LandingPage(driver);
 
         lp.loadLandingPage();
-		  Thread.sleep(3000); lp.closePopUp();
+		  Thread.sleep(3000);
+        System.out.println("loaded landing page succesfully");
+          lp.closePopUp();
 		  lp.getFooterBar().selectdomesticHotels().click();
-
 
 		  lp.getNavigationBar().selectHotels();
         try {
