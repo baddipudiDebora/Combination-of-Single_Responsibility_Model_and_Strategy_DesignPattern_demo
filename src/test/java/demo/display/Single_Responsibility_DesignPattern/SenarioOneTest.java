@@ -35,6 +35,7 @@ public class SenarioOneTest {
 
         lp.loadLandingPage();
 		  Thread.sleep(8000); 
+	     System.out.println("waiting to close popup");
 	    lp.closePopUp();
 		  lp.getFooterBar().selectdomesticHotels().click();
 
