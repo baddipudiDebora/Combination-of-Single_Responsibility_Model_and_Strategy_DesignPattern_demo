@@ -22,9 +22,9 @@ public class SenarioOneTest {
        System.out.println("Hi inside Scenario1");
         
        ChromeOptions options = new ChromeOptions();
-  //     options.addArguments("--user-data-dir=/tmp/chrome-user-data");
-  //     options.addArguments("--headless");  // Optional: Run in headless mode
-  //     options.addArguments("--disable-gpu");  // Optional: Disable GPU acceleration
+       options.addArguments("--user-data-dir=/tmp/chrome-user-data");
+       options.addArguments("--headless");  // Optional: Run in headless mode
+      options.addArguments("--disable-gpu");  // Optional: Disable GPU acceleration
 
        // Initialize ChromeDriver with these options
        WebDriver driver = new ChromeDriver(options);
