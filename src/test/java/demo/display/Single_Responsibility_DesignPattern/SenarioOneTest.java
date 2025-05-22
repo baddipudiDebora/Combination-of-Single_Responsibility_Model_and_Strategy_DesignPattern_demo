@@ -22,9 +22,9 @@ public class SenarioOneTest {
        System.out.println("Hi inside Scenario1");
         
        ChromeOptions options = new ChromeOptions();
-  //     options.addArguments("--user-data-dir=/tmp/chrome-user-data");
-  //     options.addArguments("--headless");  // Optional: Run in headless mode
-  //     options.addArguments("--disable-gpu");  // Optional: Disable GPU acceleration
+       options.addArguments("--user-data-dir=/tmp/chrome-user-data");
+       options.addArguments("--headless");  // Optional: Run in headless mode
+       options.addArguments("--disable-gpu");  // Optional: Disable GPU acceleration
 
        // Initialize ChromeDriver with these options
        WebDriver driver = new ChromeDriver(options);
@@ -34,13 +34,14 @@ public class SenarioOneTest {
         LandingPage lp = new LandingPage(driver);
 
         lp.loadLandingPage();
-		  Thread.sleep(3000); lp.closePopUp();
+		  Thread.sleep(3000);
+		//  lp.closePopUp();
 		  lp.getFooterBar().selectdomesticHotels().click();
 
 
 		  lp.getNavigationBar().selectHotels();
         try {
-        	System.out.println("Pass");
+        	System.out.println(" lp.getNavigationBar().selectHotels();  done Pass");
         }
         catch (Exception e) {
 			System.out.println("Fail");
