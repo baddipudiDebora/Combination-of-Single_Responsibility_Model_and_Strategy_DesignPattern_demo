@@ -33,8 +33,9 @@ public class SenarioOneTest {
 
         LandingPage lp = new LandingPage(driver);
 
- //       lp.loadLandingPage();
-		  Thread.sleep(3000); lp.closePopUp();
+        lp.loadLandingPage();
+		  Thread.sleep(8000); 
+	    lp.closePopUp();
 		  lp.getFooterBar().selectdomesticHotels().click();
 
 
