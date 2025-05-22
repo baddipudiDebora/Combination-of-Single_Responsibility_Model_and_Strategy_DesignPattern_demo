@@ -11,6 +11,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import srp_PageObjects.HotelSearchPage;
 import srp_PageObjects.LandingPage;
+import java.util.UUID;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 
@@ -19,15 +22,23 @@ public class SenarioOneTest {
     // Scenario 1 --> Search a hotel for one adult and log the hotel's name in TestNG
     @Test
     public void hotelSearchandView() throws InterruptedException {
+// Create ChromeOptions
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");                // Run headless mode (as often required in CI)
+		options.addArguments("--no-sandbox");                // Required in some CI environments
+		options.addArguments("--disable-dev-shm-usage");     // Improve performance in limited resource environments
 
-        
-//       ChromeOptions options = new ChromeOptions();
-//		     options.addArguments("--user-data-dir=/tmp/chrome-user-data");
-//		   options.addArguments("--headless");  // Optional: Run in headless mode
-//		    options.addArguments("--disable-gpu");  // Optional: Disable GPU acceleration
+// Generate a unique user data directory every time
+		String userDataDir = "/tmp/chrome-data-" + UUID.randomUUID();
+		options.addArguments("--user-data-dir=" + userDataDir);
 
-       // Initialize ChromeDriver with these options
-       WebDriver driver = new ChromeDriver();
+// Optionally, add other arguments if needed:
+// options.addArguments("--disable-gpu");
+// options.addArguments("--incognito");
+
+// Initialize the driver
+		ChromeDriver driver = new ChromeDriver(options);
+
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(4000));
         WebDriverManager.chromedriver().setup();
 
