@@ -11,7 +11,7 @@ public class HotelSearchPage {
 	WebDriver driver;
 	// to access navigation bar locators and methods of different section of this particular page
         By headerSectionElement = By.xpath("//header[@class='happy-gi-header gi-special-theme-left header-sticky']");
-		By SearchHotelsBlock = By.xpath("//div[contains(@class, 'ihxTzt')]");
+		By SearchHotelsBlock = By.className("fsTdCE");
 		By footerSectionElement = By.xpath("//footer[@class='happy-gi-footer']");
 		// to access header bar locators and methods 
 	public HeaderNavigationBar getNavigationBar() 
@@ -25,10 +25,12 @@ public class HotelSearchPage {
 		return new footerNavigationBar(driver, footerSectionElement);
 	}
 	// to access hotels search block locators and methods
-	 public SearchHotelsBlock getSearchHotelsBlock()
-	 {
+	 public SearchHotelsBlock getSearchHotelsBlock() throws InterruptedException {
+		 Thread.sleep(3000);
+		 System.out.println("hi this is inside getSearchHotelsBlock()");
 		 return new SearchHotelsBlock(driver, SearchHotelsBlock);
 	 }
+
 	 // constructor 
 	 public HotelSearchPage(WebDriver driver) {
 	    	// current page class variable is set to driver coming from Test class

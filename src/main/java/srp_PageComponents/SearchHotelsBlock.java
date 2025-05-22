@@ -9,26 +9,29 @@ public class SearchHotelsBlock extends AbstractComponents {
 	 WebDriver _driver;
 	
 	// locators within the Search Hotels block elements
+
+	   By hotelSearchBlock = By.className("fsTdCE");
+
 	// HotelSearchtextbox
-		By hotelSearchtextbox = By.id("downshift-1-input");
+		By hotelSearchtextbox = By.xpath("//input[contains(@id,'downshift-')]");
 		
 		// checkInDatebutton
-		By checkInDatebutton = By.xpath("//div[contains(text(),'Check-in')]");
+		By checkInDatebutton = By.id("search-widget-checkin-input");
 
 		// checkInDatetoEnter
 		By checkInDatetoEnter = By.xpath("// span[contains(text(),'25')]");
 		
 		// checkOutDatebutton
-		By checkOutDatebutton = By.xpath("//div[contains(text(),'Check-out')]");
+		By checkOutDatebutton = By.xpath("(//input[@placeholder='Travel Dates'])[2]");
 
 		// checkOutDatetoEnter
 		By checkOutDatetoEnter = By.xpath("// span[contains(text(),'29')]");
 
 		// numberofGuestButton
-		By numberofGuestButton = By.xpath("//input[@value='2 Adults  . 1 Room ']");
+		By numberofGuestButton = By.xpath("(//input[@class='SearchWidgetUIstyles__SearchInputStyle-sc-1x37qbj-6 kNWLrS'])[3]");
 		
 		// minusnumberofGuestButton
-		By minusnumberofGuestButton = By.xpath("//*[@id=\"root\"]/div[2]/div/section[1]/div[1]/div[2]/div[4]/div/div/div/div[2]/div/span[1]");
+		By minusnumberofGuestButton = By.xpath("//span[@data-testid='button-room-add']");
 		
 		// doneButtonNumGuest
 		By doneButtonNumGuest = By.xpath("//button[contains(text(),'Done')]");
@@ -38,11 +41,13 @@ public class SearchHotelsBlock extends AbstractComponents {
 	
 		// constructor
 		public SearchHotelsBlock(WebDriver driver, By SearchHotelsBlock) {
-			super(driver,SearchHotelsBlock );  // invoking parent class constructor 
+			super(driver,SearchHotelsBlock );  // invoking parent class constructor
 		}
 	
 	   // methods to actions of search hotel
 		public void enterHotels(String Hotels) throws InterruptedException {
+			System.out.println("Hi i am searching inside hotel block "+hotelSearchBlock.toString());
+			findElement(hotelSearchtextbox).click();
 			findElement(hotelSearchtextbox).sendKeys(Hotels);
 			Thread.sleep(2000);
 			findElement(hotelSearchtextbox).sendKeys(Keys.ARROW_DOWN);
